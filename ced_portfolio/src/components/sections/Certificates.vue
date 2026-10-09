@@ -17,13 +17,6 @@ const certificates: Certificate[] = [
     description: 'Secured the championship title by designing, programming, and calibrating a custom autonomous robot utilizing advanced PID control loops and Kalman filtering for high-speed track navigation.',
     image: lineFollowerCert
   }
-  // {
-  //   title: 'Next Certificate Title',
-  //   issuer: 'Issuing Organization',
-  //   date: '2027',
-  //   description: 'Description of what you learned or achieved.',
-  //   image: yourNextImportedImage
-  // }
 ]
 </script>
 

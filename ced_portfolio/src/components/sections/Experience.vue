@@ -109,7 +109,7 @@ const experienceData: Project[] = [
   },
   {
     id: 'esp32-fc',
-    title: 'Sinagtala Flight Controller',
+    title: 'Drone Flight Controller',
     role: 'Firmware Developer',
     year: '2026',
     category: ['Embedded', 'Hardware'],
@@ -122,7 +122,7 @@ const experienceData: Project[] = [
   },
   {
     id: 'pid-line',
-    title: 'Autonomous Line-Follower',
+    title: 'Line-Follower',
     role: 'Robotics Programmer & Hardware Designer',
     year: '2026',
     category: ['Embedded', 'Hardware'],

@@ -68,7 +68,7 @@ const projects: Project[] = [
       { label: 'Frontend', items: [t('React', 'react_logo'), t('TypeScript', 'typescript')] },
       { label: 'Backend', items: [t('Express', 'expressjs')] },
       { label: 'Database', items: [t('MongoDB', 'mongodb')] },
-      { label: 'Deploy', items: [t('Vercel', 'vercel')] },
+      { label: 'Deploy', items: [t('Vercel', 'vercel'), t('Render', 'render')] },
       { label: 'CI/CD', items: [t('GitHub Actions', 'github')] },
     ]
   },
