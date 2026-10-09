@@ -219,7 +219,6 @@ const experienceData: Project[] = [
   }
 ]
 
-// --- State & logic ---
 const activeCategory = ref('All')
 
 const categories = computed(() => [
@@ -247,14 +246,10 @@ const coreSkills = computed<Tech[]>(() => {
 <template>
   <section class="animate-fade-in w-full flex flex-col">
 
-    <!-- Header & filters -->
     <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-gray-300 pb-8 mb-4 gap-8">
       <div class="max-w-xl">
         <span class="text-[10px] uppercase tracking-widest font-bold text-gray-400 mb-3 block">Engineering Log</span>
         <h2 class="text-4xl font-serif text-black">Experience</h2>
-        <p class="mt-4 text-[15px] leading-relaxed text-gray-500">
-          A track record of identifying constraints, designing architectures, and building full-stack solutions across web, embedded hardware, and AI.
-        </p>
       </div>
 
       <div class="flex flex-wrap gap-2 md:max-w-sm md:justify-end">
@@ -273,7 +268,6 @@ const coreSkills = computed<Tech[]>(() => {
       </div>
     </div>
 
-    <!-- Core Skills Array -->
     <div class="flex flex-col gap-5 border-b border-gray-200 pb-10 mb-4">
       <ul class="flex flex-wrap gap-2" aria-label="Core skills">
         <li
@@ -293,14 +287,12 @@ const coreSkills = computed<Tech[]>(() => {
       </ul>
     </div>
 
-    <!-- CV Style Project List -->
     <div class="flex flex-col">
       <article
         v-for="project in filteredProjects"
         :key="project.id"
         class="grid grid-cols-1 md:grid-cols-[5rem_1fr] gap-4 md:gap-10 border-b border-gray-200 py-12 last:border-0"
       >
-        <!-- Timeline Marker -->
         <div class="flex items-center gap-2 md:flex-col md:items-end md:gap-1.5 md:border-r md:border-gray-200 md:pr-6 md:pt-1.5">
           <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-black" aria-hidden="true"></span>
           <span class="text-xs font-bold uppercase tracking-widest text-gray-500 whitespace-nowrap">{{ project.year || 'Ongoing' }}</span>
@@ -308,13 +300,11 @@ const coreSkills = computed<Tech[]>(() => {
 
         <div class="flex flex-col min-w-0">
           
-          <!-- Title & Role -->
           <div class="mb-4">
             <h3 class="text-2xl md:text-3xl font-serif text-black leading-tight">{{ project.title }}</h3>
             <span v-if="project.role" class="text-sm font-bold uppercase tracking-widest text-gray-400 mt-2 block">{{ project.role }}</span>
           </div>
 
-          <!-- CV Description Paragraphs -->
           <div v-if="project.description" class="flex flex-col gap-3 mb-6 max-w-3xl">
             <p 
               v-for="(paragraph, index) in project.description" 
@@ -325,7 +315,6 @@ const coreSkills = computed<Tech[]>(() => {
             </p>
           </div>
 
-          <!-- Grouped repositories (Fundamentals) -->
           <ul v-if="project.collection" class="grid grid-cols-1 md:grid-cols-2 gap-px border border-gray-200 bg-gray-200 mb-6 max-w-3xl">
             <li v-for="item in project.collection" :key="item.title" class="bg-white">
               <a
@@ -340,7 +329,6 @@ const coreSkills = computed<Tech[]>(() => {
             </li>
           </ul>
 
-          <!-- Applied Technologies -->
           <ul class="flex flex-wrap gap-2 mb-6" aria-label="Technologies used">
             <li
               v-for="item in project.tech"
@@ -352,7 +340,6 @@ const coreSkills = computed<Tech[]>(() => {
             </li>
           </ul>
 
-          <!-- Action Links -->
           <div v-if="project.links.repo || project.links.demo" class="flex gap-6 pt-2">
             <a
               v-if="project.links.repo && project.links.repo !== '#'"
